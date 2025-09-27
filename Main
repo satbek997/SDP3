@@ -1,0 +1,15 @@
+package assignment3;
+
+
+public class Main {
+
+    public static void main(String[] args) {
+        Letter letter = new Letter("You won million");
+        ShortMessageLetterAdapter adapter = new ShortMessageLetterAdapter(letter);
+        System.out.println(createTitle(adapter));
+    }
+    private static String createTitle(ShortMessage shortMessage) {
+        return "New message: " + shortMessage.getShortMessage();
+    }
+
+}
